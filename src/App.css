@@ -1,38 +1,123 @@
+/* Estilos para o aplicativo */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-color: #5f6f3a; 
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #495636; 
+
+  text-align: center;
+  width: 100%;
+}
+
+.App-header h1 {
+  color: #ffffff;
+  margin: 0; 
+}
+
+.white-text {
+  color: #ffffff; 
+}
+
+
+
+.trail-square {
+  width: 300px;
+  height: 250px; 
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, height 0.3s ease, opacity 0.3s ease; /* Adicionando transições */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: center;
+  margin: 20px; 
+  overflow: hidden; 
 }
 
-.App-link {
-  color: #61dafb;
+.trail-square.expanded {
+  height: auto; 
+  opacity: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.trail-square .text-center {
+  opacity: 1;
+}
+
+.expanded-content {
+  margin-top: 16px;
+}
+
+.expanded-image {
+  width: 100%;
+  max-height: 200px; 
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.expanded-description {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 8px;
+}
+
+.trail-image {
+  width: 100%;
+  height: 150px; 
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.trail-square h2 {
+  color: #000000;
+  font-size: 18px;
+  margin-bottom: 8px; 
+}
+
+.trail-square p {
+  color: #4a5568;
+  font-size: 14px;
+  line-height: 1.4; 
+  overflow: hidden;
+}
+
+.trail-square:hover {
+  background-color: #f0f0f0;
+}
+
+.header-image {
+  height: 300px;
+}
+
+.h2-center {
+  text-align: center; 
+}
+
+.text-xs {
+  font-size: 12px; 
+  line-height: 1.5; 
+  margin: 4px 0; 
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+  .header-image {
+    height: 180px; 
   }
 }
